@@ -1,0 +1,200 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* ===============================
+   STAR BACKGROUND
+================================ */
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000 url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:moveStars 80s linear infinite;
+z-index:-5;
+}
+
+@keyframes moveStars{
+0%{transform:translateY(0);}
+100%{transform:translateY(-1000px);}
+}
+
+/* ===============================
+   GIFT SCREEN
+================================ */
+
+#giftScreen{
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+#giftScreen h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+#giftScreen h2{
+font-size:30px;
+color:#ff8dc6;
+margin-bottom:35px;
+}
+
+.gift{
+font-size:100px;
+cursor:pointer;
+transition:.4s;
+animation:bounce 2s infinite;
+filter:drop-shadow(0 0 15px hotpink);
+}
+
+.gift:hover{
+transform:scale(1.2);
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+#giftScreen p{
+margin-top:20px;
+font-size:22px;
+}
+
+/* ===============================
+   STORY
+================================ */
+
+#story{
+width:100%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:25px;
+}
+
+/* ===============================
+   PAGE
+================================ */
+
+.page{
+display:none;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+text-align:center;
+width:100%;
+max-width:900px;
+min-height:100vh;
+padding:40px 20px;
+animation:fade 1s ease;
+}
+
+.page.active{
+display:flex;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===============================
+   PHOTO
+================================ */
+
+.photo{
+width:90%;
+max-width:360px;
+height:auto;
+max-height:470px;
+object-fit:cover;
+border-radius:20px;
+display:block;
+margin:20px auto;
+box-shadow:0 0 35px hotpink;
+transition:.5s;
+}
+
+.photo:hover{
+transform:scale(1.03);
+}
+
+/* ===============================
+   HEADING
+================================ */
+
+.page h1{
+font-size:38px;
+color:#ff9dcb;
+margin:20px 0;
+text-shadow:0 0 15px hotpink;
+}
+
+/* ===============================
+   MESSAGE
+================================ */
+
+.msg{
+width:95%;
+max-width:700px;
+font-size:20px;
+line-height:1.8;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:20px;
+margin:20px auto;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+color:white;
+background:linear-gradient(45deg,#ff4d88,#ff9dcb);
+box-shadow:0 0 25px hotpink;
+transition:.3s;
+margin-top:25px;
+margin-bottom:40px;
+}
+
+button:hover{
+transform:scale(1.08);
+}
